@@ -1,5 +1,6 @@
 import '../styles/Navbar.css'
 
+
 function Navbar() {
     return (
         <nav>
@@ -12,7 +13,22 @@ function Navbar() {
                         <li><a href="#home">Home</a></li>
                         <li><a href="#product">Product</a></li>
                         <li><a href="#contact">Contact Us</a></li>
-                        <li><a href="" className="tbl-biru">Sign Up</a></li>
+                        <li>
+                            <input
+                                type="text"
+                                placeholder="Search..."
+                                style={{ padding: '5px', borderRadius: '4px', border: '1px solid #ccc' }}
+                            />
+                        </li>
+                        <li>
+                            <a href="#profil" title="Profil">
+                                <img
+                                    src="/image/profil.png"
+                                    alt="profil"
+                                    className="navbar-icon-profil"
+                                />
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
