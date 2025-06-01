@@ -1,6 +1,4 @@
-import '../styles/Login.css'
 import React, { useState } from 'react';
-
 
 function Login() {
   const [username, setUsername] = useState('');
@@ -10,39 +8,66 @@ function Login() {
     e.preventDefault();
     console.log('Username:', username);
     console.log('Password:', password);
-    // Logika autentikasi bisa ditambahkan di sini
   };
 
   return (
-    <div className="login-container">
-      <h2>Login</h2>
-      <form onSubmit={handleSubmit} className="login-form">
-        <div className="form-group">
-          <label htmlFor="username">Username:</label>
-          <input
-            type="text"
-            id="username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            required
-          />
-        </div>
+     <div className="flex min-h-screen bg-[#E9E6DF]">
+      {/* Form login (tengah) */}
+      <div className="flex-1 flex items-center justify-center p-4">
+        <form
+          onSubmit={handleSubmit}
+        >
+          <h2 className="text-2xl font-bold mb-6 text-gray-800 text-center">
+            Login
+          </h2>
 
-        <div className="form-group">
-          <label htmlFor="password">Password:</label>
-          <input
-            type="password"
-            id="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-        </div>
+          <div className="mb-4">
+            <label htmlFor="username" className="block mb-1 text-gray-600">
+              Username
+            </label>
+            <input
+              type="text"
+              id="username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              required
+              className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#7b5e46]"
+            />
+          </div>
 
-        <button type="submit">Login</button>
-      </form>
+          <div className="mb-6">
+            <label htmlFor="password" className="block mb-1 text-gray-600">
+              Password
+            </label>
+            <input
+              type="password"
+              id="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+              className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#7b5e46]"
+            />
+          </div>
+
+          <button
+            type="submit"
+            className="w-full bg-[#7b5e46] text-white py-2 rounded-md hover:bg-[#654735] focus:outline-none focus:ring-2 focus:ring-[#7b5e46]"
+          >
+            Login
+          </button>
+        </form>
+      </div>
+
+      
+      <div className="flex-1 hidden md:flex items-center justify-end">
+        <img
+          src="public\image\loginbg.png"
+          alt="Login Illustration"
+          className="h-full max-h-screen w-auto object-contain"
+        />
+      </div>
     </div>
   );
 }
 
-export default Login
+export default Login;
