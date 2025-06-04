@@ -13,19 +13,25 @@ function Login() {
   return (
      <div className="flex min-h-screen bg-[#E9E6DF]">
       {/* Form login (tengah) */}
-      <div className="flex-1 flex items-center justify-center p-4">
+      
+      <div className="flex-1 flex items-center justify-center p-4"> 
         <form
           onSubmit={handleSubmit}
         >
-          <h2 className="text-2xl font-bold mb-6 text-gray-800 text-center">
-            Login
-          </h2>
+          <div>
+                <img
+                src = "public\image\Logo.png"
+                alt= "Logo"
+                className="h-full max-h-screen w-auto object-contain"
+                />
+          </div>
 
           <div className="mb-4">
             <label htmlFor="username" className="block mb-1 text-gray-600">
               Username
             </label>
             <input
+              placeholder='Enter your username'
               type="text"
               id="username"
               value={username}
@@ -40,6 +46,7 @@ function Login() {
               Password
             </label>
             <input
+              placeholder='Enter your password'
               type="password"
               id="password"
               value={password}
