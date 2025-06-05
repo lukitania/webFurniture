@@ -34,6 +34,7 @@ function Signup() {
                     </div>
                     
                     <div className="mb-4">
+                        <label htmlFor="username" className="block text-[#7b5e46] mb-2">Username</label>
                         <input
                             placeholder="Username"
                             type="text"
