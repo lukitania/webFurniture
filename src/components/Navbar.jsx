@@ -3,37 +3,44 @@ import '../styles/Navbar.css'
 
 function Navbar() {
     return (
-        <nav>
-            <div className="wrapper">
-                <div className="logo"><a href="" target="_blank" rel="noopener noreferrer">
-                    <img src="/image/Logo.png" width={200} />
-                </a></div>
-                <div className="menu">
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#product">Product</a></li>
-                        <li><a href="#contact">Contact Us</a></li>
-                        <li>
-                            <input
-                                type="text"
-                                placeholder="Search..."
-                                style={{ padding: '5px', borderRadius: '4px', border: '1px solid #ccc' }}
-                            />
-                        </li>
-                        <li>
-                            <a href="#profil" title="Profil">
-                                <img
-                                    src="/image/profil.png"
-                                    alt="profil"
-                                    className="navbar-icon-profil"
-                                />
-                            </a>
-                        </li>
-                    </ul>
+        <nav className="bg-nav py-4">
+            <div className="container mx-auto flex items-center justify-between">
+                <div>
+                    <img
+                        alt="Hikmah"
+                        src="public\image\Logo.png"
+                        className="h-8 w-auto"
+                    />
                 </div>
+                <ul className="flex space-x-4">
+                    <li>
+                        <a className="text-[#362706]">Home</a>
+                    </li>
+                    <li>
+                        <a className="text-[#362706]">Product</a>
+                    </li>
+                    <li>
+                        <a className="text-[#362706]">Contact Us</a>
+                    </li>
+                </ul>
+                <ul className="flex space-x-4">
+                    <div className="relative ...">
+                        <div className="pointer-events-auto absolute ...">
+                            <svg className="absolute h-5 w-5 text-gray-400">
+                            </svg>
+                        </div>
+                        <input type="text" placeholder="Search" class="flex items-center justify-between" />
+                    </div>
+                    <img
+                        alt="Hikmah"
+                        src="public\image\profil.png"
+                        className="h-8 w-auto"
+                    />
+                </ul>
+
             </div>
         </nav>
     )
 }
 
-export default Navbar
+export default Navbar;
